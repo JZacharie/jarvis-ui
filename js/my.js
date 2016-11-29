@@ -243,9 +243,9 @@ var ractive = new Ractive({
             }]
         }],
         client: {
-            urilogin : "login",
-            uripassword : "password",
-            uri: "192.168.0.x",
+            urilogin : "login",         // welcome message
+            uripassword : "password",   // welcome message
+            uri: "192.168.0.x",         // welcome message
             urimode : "http",
             mute: true,
             port: 443,
