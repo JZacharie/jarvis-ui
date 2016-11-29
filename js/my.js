@@ -243,15 +243,19 @@ var ractive = new Ractive({
             }]
         }],
         client: {
+            urilogin : "login",
+            uripassword : "password",
+            uri: "192.168.0.x",
+            urimode : "http",
             mute: true,
-            port: 8080,
+            port: 443,
             theme: "slate",
             verbose: false
         }, // client config
         server: {} // server config
     },
     computed: {
-        server_url: function () { return 'http://'+window.location.hostname+':'+this.get('client.port'); }
+        server_url: function () { return this.get('client.urimode')+'://'+this.get('client.urilogin')+':'+this.get('client.uripassword')+'@'+this.get('client.uri')+':'+this.get('client.port'); }
     },
     
     onrender: function () {
